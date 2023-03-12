@@ -13,13 +13,13 @@ fs.writeFile(`${contdirpath}/currentdate-time.txt`,content,(res)=>{
 
 })
 
-app.get('/',(res,req)=>{
-    res.sendFile(path.join(__dirname, 'timestamp/currentdate-time.txt'));
+app.get('/',(req,res)=>{
+    res.sendFile(path.join(__dirname, "timestamp/currentdate-time.txt"));
 })
 
 app.use(express.static("timestamp"));
 
 
 app.listen(PORT, ()=>{
-    console.log('server started localhost:9000');
+    console.log('server started localhost:5000');
 })
